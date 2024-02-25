@@ -1,0 +1,181 @@
+$font : Inter;
+
+flex{
+    display:flex;
+    justify-content:center;
+    padding-left: 2px;
+    align-items: center;
+    text-align: left;
+}
+
+
+.heading{
+    font-family: $font;
+font-size: 32px;
+font-weight: 400;
+line-height: 44px;
+color:#2C384A;
+}
+
+
+.smallBoxContainer{
+    @extend flex;
+    gap:1rem;
+    flex-wrap:wrap;;
+}
+
+
+.cardMainSmall {
+    width: 300px;
+height: 425px;
+top: 1806px;
+left: 300px;
+border-radius: 12px;
+gap:12px;
+background-color:#FFFFFF;
+padding:12px;
+cursor:pointer;
+}
+
+.smallContainerHeading{
+    max-width: 70%;
+    margin: auto;
+    width: 100%;
+}
+
+.cardMainSmall .images{
+    text-align:center;
+    padding-bottom: 2rem;
+padding-top: 2rem;;
+}
+
+.cardMainSmall .images img{
+    width: 141px;
+height: 103px;
+top: 1843px;
+left: 396px;
+text-align:center;;
+}
+
+.cardMainSmall .offCont{
+    @extend flex;
+    gap:2rem;
+}
+
+.cardMainSmall .cardName{
+    font-family: $font;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+color:#626E79;
+text-align: center;
+}
+
+.cardCont{
+    font-family: $font;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+color:#626E79;
+}
+
+.smallCardPrice{
+    @extend flex;
+    gap:12px;
+}
+
+.smallCardPrice .newPrice{
+    font-family: $font;;;
+font-size: 20px;
+font-weight: 400;
+line-height: 28px;
+color:#5C6874;
+}
+
+
+.smallCardPrice .oldPrice{
+    font-family: $font;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+color: #9FA9B3;;
+}
+.smallCardPrice .discount{
+    font-family: $font;
+font-size: 13px;
+font-weight: 400;
+line-height: 20px;;
+color:#EF4C5D;;
+}
+
+// signup 
+
+.signUp{
+    max-width: 70%;
+    width:100%;;
+    margin:auto;
+    @extend flex;
+    gap:  2rem;
+    margin-top: 2rem;;
+    flex-wrap:wrap;
+}
+
+.leftSignUp{
+    font-family: $font;;
+font-size: 30px;
+font-weight: 400;
+line-height: 44px;
+text-align: left;
+color:#5C6874;
+}
+
+.form input{
+    width: 248px;
+    height: 52px;
+    top: 2309px;
+    left: 887px;
+    border-radius: 12px, 0px, 0px, 12px;
+border:none;
+background-color:#FFFFFF;    
+}
+
+.rightSignUp button{
+    width: 97px;
+height: 52px;
+top: 2309px;
+left: 1235px;
+border-top-right-radius: 12px;
+border-bottom-right-radius:12px;
+background-color:#1B88F4;
+border:none;
+}
+
+.rightSignUp p{
+    font-family: $font;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0.699999988079071px;
+text-align: center;
+color:white;
+}
+    @media only screen and (max-width: 680px) {
+      .rightSignUp input{
+        width:14rem;
+      }
+      .signUp{
+        max-width:90%;
+      }
+    }
+
+    @media only screen and (max-width: 450px) {
+      
+        .rightSignUp input{
+            width:9rem;
+          }
+
+
+    }
+    

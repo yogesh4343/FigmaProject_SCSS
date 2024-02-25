@@ -1,0 +1,358 @@
+$font : Inter;
+
+@mixin flexFunc($justify){
+    display:flex;
+    justify-content:$justify;
+    padding-left: 2px;
+    align-items: center;
+    text-align: left;
+}
+
+@mixin customFunc($fontSize , $color){
+    font-family: font;
+    font-size: $fontSize;
+    font-weight: 400;
+    color: $color;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    @include flexFunc(center);
+}
+
+.mainNav{
+    background-color: #212731;
+    cursor:pointer;
+}
+
+.mainHeader {
+    color: white;
+    height: 64px;
+    max-width: 70%;
+    margin: auto;
+    @include flexFunc(space-around);
+
+    .search{
+    @include flexFunc(flex-start);
+    position: relative;
+    }
+
+    
+
+    .search input{
+        width: 258px;
+        height: 37px;
+        border-radius: 8px;
+        padding-left: 2rem;
+        font-size: larger;
+    }
+
+    .search span{
+        display: flex;
+        font-size:  2rem;
+        position: absolute;
+        color: #212731;
+        padding-left: .4rem;
+    }
+
+    .options{
+        @include flexFunc(space-around);
+        gap: 2rem;
+        color: #D1D6DA;
+        font-family: $font;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .hamBurger{
+        display:none;
+    }
+
+@media only screen and (max-width: 900px) {
+.options{
+    gap: 1rem;
+}
+    .search input{
+        width: 208px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 680px) {    
+    .options{
+        display:none;
+    }
+    .hamBurger{
+        display:block;
+        font-size:  2rem;
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+        .options{
+        display:none;
+    }
+
+    .search input{
+        width: 208px;
+        height: 30px;
+    }
+}
+}
+
+@media only screen and (max-width: 900px) {
+    .mainHeader{
+        max-width: 100%;
+    }
+}
+
+// Header 
+body{
+    background-color: #FBFCFD;
+}
+.main{
+    max-width: 80%;
+    width: 100%;
+    background-color: #FBFCFD;
+    margin: auto;
+    cursor: pointer;
+}
+
+    .box{
+        margin-top: 28px;
+    }
+
+       .box .lastUpdateBox{
+            @include flexFunc(space-between);
+            padding: .6rem;
+       }    
+   .lastUpdateBox .leftUpdateBox{
+    @include flexFunc(space-between);
+                gap: 2rem;
+        }
+             .leftUpdateBox   .date{
+                    @include flexFunc(space-between);
+                    gap: 1rem;
+                    color: #4B5665;
+             }
+                  .date  .span{
+                        display: flex;
+                    }
+
+                    span{
+                        font-family: font;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    span svg{
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                .advertising{
+                    @include flexFunc("");
+                    gap: 1rem;
+                    color: #4B5665;
+                }
+                    .span{
+                        display: flex;
+                    }
+
+                    span{
+                        font-family: font;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    span svg{
+                        width: 20px;
+                        height: 20px;
+                    }
+
+    
+            .rightUpdateBox .topRelative{
+                font-family: font;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                display: flex;
+              
+            }
+
+            .topRelative select{
+                background-color: #FBFCFD;
+                border: none;
+                color: #727D87;
+            }
+
+    .heading{
+        font-size: 48px;
+        line-height: 60px;
+        font-family: $font;
+        font-weight: 400;
+    }
+
+    hr{
+        height:1.33px;
+        background-color:#E1E4E6;
+        margin: 0%; 
+    }
+
+    .mainHeaderHide {
+        color: white;
+        width:100%;
+        @include flexFunc(space-around);
+        margin-top:0.4rem;
+        position: absolute;
+        color:white;;
+        background-color:black;
+        display:none;;
+
+    }
+    .options .span{
+        padding:0.5rem;
+    }
+
+// tools 
+
+.main .tools{
+    gap:1rem;
+    display: flex;
+}
+.main .cover{
+        width: 105px;
+height: 36px;
+border-radius: 12px;
+background-color: #FFFFFF;
+@include flexFunc(space-between);
+    }
+
+    .cover .cont{
+        @include customFunc(
+            14px , #4B5665)
+    }
+
+.dir{
+    display: flex;
+}
+
+.dir .span {
+    @include flexFunc(center);
+}
+
+.combine .span svg{
+width: 10px;
+height: 8.25px;
+color: #5C6874;
+}
+
+.dir .cont{
+        @include customFunc(
+            13px , #727D87)
+    }
+
+    .combine{
+        @include flexFunc(center);
+        gap: 8px;
+    }
+
+    @media only screen and (max-width: 450px) {
+        .box .heading{
+            font-size: 22px;
+        }
+        .main .cover{
+            width: 94px;
+            height: 30px;
+            @include flexFunc(center);
+        }
+        .dir{
+            width: 94px;
+            height: 30px;
+        }
+        .tools{
+            flex-wrap:wrap;
+            justify-content:space-around;
+            gap: 0.4rem;
+            margin-bottom: 12px;
+        }
+        .dir {
+           flex-wrap:wrap;
+           width: 100%;
+        }
+       
+    }
+
+@media only screen and (max-width: 680px) {
+
+    .box .heading{
+        font-size: 32px;
+    }
+    .leftUpdateBox{
+        flex-direction:column;
+        gap: 0px;
+    }
+    .lastUpdateBox .leftUpdateBox{
+        gap: 1rem;
+}
+.mainHeaderHide {
+    display:block;;
+}
+}
+
+@media only screen and (max-width: 900px) {
+    .main{
+        max-width: 95%;
+    }
+}
+
+// footer 
+.footerCover{
+    background-color:#212731;
+    margin-top:3rem;
+}
+
+.mainFooter{
+    width: 100%;;
+    max-width:70%;
+    margin:auto;
+    flex-wrap:wrap;
+    padding-bottom:4rem;
+    padding-top:2rem;;
+    @include flexFunc(space-between);
+}
+
+.leftFooterHeading{
+    font-family: $font;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+color:#FFFFFF;;
+}
+
+.footerPoints{
+    font-family: $font;;
+font-size: 13px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0em;
+color:#B6BDC4;
+
+}
+
+.rightFooter select{
+    font-family: $font;;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#D1D6DA;
+    background-color:#212731;;
+    border:none;;
+    color:#D1D6DA;
+}
+
+@media only screen and (max-width: 600px) {
+        .mainFooter{
+            max-width: 90%;
+        }
+}
